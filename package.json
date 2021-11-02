@@ -1,0 +1,87 @@
+{
+  "name": "dclient",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@yzfe/vue-svgicon-loader": "^1.0.0-alpha.0",
+    "core-js": "^3.6.5",
+    "element-ui": "^2.15.3",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "shortid": "^2.2.15",
+    "vue": "^2.6.11",
+    "vue-i18n": "^8.18.2",
+    "vue-observe-visibility": "^0.4.6",
+    "vue-router": "^3.3.4",
+    "vue-spinner": "^1.0.3",
+    "vue-svgicon": "^4.0.0-alpha.3",
+    "vuex": "^3.6.2",
+    "vuex-persist": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.172",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "axios": "^0.21.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^7.14.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "vue-cli-plugin-i18n": "~0.6.1",
+    "vue-friendly-iframe": "^0.20.0",
+    "vue-infinite-loading": "^2.4.5",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": "vue-cli-service lint"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "browser": true,
+      "es6": true
+    },
+    "plugins": [
+      "prettier"
+    ],
+    "extends": [
+      "plugin:vue/recommended",
+      "eslint:recommended",
+      "prettier/vue",
+      "plugin:prettier/recommended",
+      "prettier"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "browserslist": {
+    "production": [
+      "> 1%",
+      "last 2 versions"
+    ],
+    "development": [
+      "last 1 Chrome versions"
+    ],
+    "chromeextension": [
+      "last 1 Chrome versions"
+    ]
+  }
+}
