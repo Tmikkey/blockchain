@@ -1,0 +1,78 @@
+.profile {
+    display: flex;
+    .right-col {
+        width: 400px;
+        // float: right;
+    }
+    .left-col {
+        width: 400px;
+        text-align: right;
+        margin-right: 68px;
+    }
+    .b-textinput {
+        margin-bottom: 24px;
+        .description {
+            font-size: 12px;
+            line-height: 130%;
+            letter-spacing: -0.01em;
+            color: #B3B1BF;
+            margin-bottom: 8px;
+        }
+        input {
+            padding: 0px 20px;
+            width: 100%;
+            min-height: 52px;
+            background: #24252C;
+            border-radius: 8px;
+            border: none;
+            font-size: 15px;
+            line-height: 145%;
+            letter-spacing: -0.01em;
+            color: #F1F0FE;
+        }
+    }
+}
+
+.change_password {
+    .description {
+        font-size: 15px;
+        line-height: 145%;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.01em;
+        color: #B3B1BF;
+        margin-bottom: 40px;
+    }
+    .sign__hide-password {
+        right: 11px;
+        top: 19.8px;
+    }
+    .passwordWrapper .purple-button {
+        margin-top: 52px;
+    }
+}
+.change_picture {
+    display: inline-flex;
+    position: relative;
+    button {
+        position: relative;
+    }
+    input[type='file'] {
+        display: none;
+    }
+    label {
+        border-radius: 100px;
+        background: #24252C;
+        padding: 17px;
+        display: flex;
+        // position: absolute;
+        // top: 0;
+
+    position: absolute;
+    margin-left: 89px;
+    margin-top: 85px;
+    cursor: pointer;
+
+
+    }
+}

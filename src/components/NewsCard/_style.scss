@@ -1,0 +1,39 @@
+.card {
+    width: 370px;
+    // flex: 1 1 30%;
+    // padding: 8px;
+    color: #F1F0FF;
+    // background-color: #14151A;
+    border-radius: 10px;
+    // margin-right: 20px;
+    
+    .news__item {
+        background-color: #14151A;
+        height: 567px;
+        width: 373px;
+        position: relative;
+        margin: 0 20px;
+        &__title {
+            margin: 0;
+            height: 148px;
+        }
+        &__bottom {
+            // position: absolute;
+            // bottom: 20px;
+            &__comments {
+                margin-left: auto;
+            }
+        }
+        &__image {
+            width: 100%;
+                height: max-content;
+            svg {
+                width: 100%;
+                height: max-content;
+            }
+        }
+    }
+}
+.news_card {
+    margin-right: 20px;
+}

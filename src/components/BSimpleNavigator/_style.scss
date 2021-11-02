@@ -1,0 +1,63 @@
+@import "../../assets/scss/vars";
+@import "custom-properties";
+
+.b-simple-navigation {
+    display: inline-block;
+
+    ul {
+        text-align: right;
+
+        li {
+            display: inline-block;
+            margin-left: 4px;
+
+            @include links() {
+                color: $selected-color;
+                font-weight: bold;
+                letter-spacing: normal;
+                display: inline-block;
+                padding: var(--b-simple-navigation-link-padding);
+                text-decoration: none;
+                transition: all $transition-length ease;
+                border-radius: $border-radius;
+
+                &:not(.disabled) {
+                    &.router-link-active, &:hover {
+                        color: $selected-color;
+                        text-decoration: none;
+                    }
+                }
+
+                &.disabled {
+                    cursor: initial;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    &--vertical {
+        display: block;
+        --b-simple-navigation-link-padding: 6px;
+
+        ul {
+            li {
+                display: block;
+
+                svg {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
+
+@include media-max($bp-menu) {
+    .b-simple-navigation {
+        ul {
+            li {
+                --b-simple-navigation-link-padding: 16px 20px;
+            }
+        }
+    }
+}

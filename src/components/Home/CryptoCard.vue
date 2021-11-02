@@ -1,0 +1,123 @@
+<template>
+  <div class="crypto_card">
+    <div class="home__recomendations__row">
+      <div class="recomendation-card">
+        <div class="crypto__recomendations__item">
+          <a v-for="crypto in cryptos" :key="crypto.id" type="button" class="crypto">
+            <div class="crypto__recomendations__items">
+              <svg
+                class="logo"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M39.3586 24.8674C36.6874 35.5818 25.8355 42.1024 15.1198 39.4305C4.40865 36.7594 -2.11192 25.9068 0.560396 15.1932C3.23037 4.47768 14.0823 -2.04338 24.7946 0.627765C35.5095 3.29891 42.0297 14.1527 39.3583 24.8676L39.3585 24.8674H39.3586Z"
+                    fill="#F7931A"
+                  />
+                  <path
+                    d="M28.8119 17.1506C29.21 14.489 27.1836 13.0583 24.4128 12.1039L25.3117 8.49857L23.117 7.95171L22.242 11.4621C21.665 11.3182 21.0725 11.1826 20.4836 11.0482L21.365 7.51463L19.1717 6.96777L18.2723 10.5719C17.7948 10.4632 17.3259 10.3558 16.8709 10.2426L16.8735 10.2312L13.847 9.47547L13.2632 11.8195C13.2632 11.8195 14.8914 12.1928 14.8571 12.2157C15.7458 12.4375 15.9065 13.0258 15.8799 13.4922L14.8559 17.5995C14.9171 17.615 14.9965 17.6375 15.0841 17.6727C15.0109 17.6545 14.933 17.6347 14.8521 17.6153L13.4169 23.3691C13.3083 23.6391 13.0326 24.0443 12.4113 23.8904C12.4333 23.9223 10.8162 23.4923 10.8162 23.4923L9.72656 26.0045L12.5826 26.7165C13.1139 26.8497 13.6345 26.9891 14.1473 27.1202L13.2391 30.7669L15.4312 31.3138L16.3306 27.7058C16.9295 27.8684 17.5107 28.0183 18.0796 28.1597L17.1833 31.7506L19.378 32.2975L20.2861 28.6577C24.0285 29.3659 26.8425 29.0804 28.0269 25.6954C28.9813 22.9701 27.9794 21.3982 26.0105 20.3731C27.4445 20.0423 28.5247 19.0992 28.8127 17.1509L28.812 17.1504L28.8119 17.1506ZM23.7976 24.1819C23.1193 26.9072 18.5308 25.434 17.0431 25.0646L18.2482 20.2334C19.7358 20.6047 24.5064 21.3397 23.7977 24.1819H23.7976ZM24.4763 17.1111C23.8576 19.59 20.0385 18.3306 18.7996 18.0218L19.8922 13.6402C21.1311 13.949 25.1208 14.5254 24.4765 17.1111H24.4763Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="40" height="40" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="data">
+                <!-- <img src="@/assets/svg/bitcoin.svg" /> -->
+                <!-- <div class="logo" :style="{ 'background-image': 'url(' + crypto.logo + ')' }"></div> -->
+                {{ crypto.name }}
+                <p>{{ crypto.data }}</p>
+              </div>
+            </div>
+            <svg
+              v-if="crypto.isUp"
+              class="isUp"
+              width="9"
+              height="6"
+              viewBox="0 0 9 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M4.5 0.5L9 5.5H0L4.5 0.5Z" fill="#4EBE96" />
+            </svg>
+            <svg
+              v-else
+              class="isUp"
+              width="9"
+              height="6"
+              viewBox="0 0 9 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M4.5 5.5L-4.37114e-07 0.500001L9 0.5L4.5 5.5Z" fill="#D96262" />
+            </svg>
+            <hr />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import AvatarView from '@/components/AvatarView/AvatarView'
+export default {
+  name: 'NewsCard',
+  components: { AvatarView },
+  props: {
+    title: {
+      type: String,
+      default: '',
+    },
+    text: {
+      type: String,
+      default: '',
+    },
+    name: {
+      type: String,
+      default: '',
+    },
+  },
+  data() {
+    return {
+      cryptos: [
+        {
+          name: 'BTC',
+          data: '46,002.00 USD',
+          isUp: true,
+          logo: '@/assets/svg/bitcoin.svg',
+        },
+        {
+          name: 'BTC',
+          data: '46,002.00 USD',
+          isUp: false,
+          logo: '@/assets/svg/bitcoin.svg',
+        },
+        {
+          name: 'BTC',
+          data: '46,002.00 USD',
+          isUp: true,
+          logo: '@/assets/svg/bitcoin.svg',
+        },
+        {
+          name: 'BTC',
+          data: '46,002.00 USD',
+          isUp: true,
+          logo: '@/assets/svg/bitcoin.svg',
+        },
+      ],
+    }
+  },
+}
+</script>
+
+<style lang="scss">
+@import 'style';
+</style>

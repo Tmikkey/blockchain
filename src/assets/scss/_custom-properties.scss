@@ -1,0 +1,138 @@
+:root {
+    --b-header-height: 96px;
+    //--b-header-height: 72px;
+    --b-data-layout-cols-padding: 16px;
+    --b-data-table-header-sticky-top: 146px;
+    --b-left-menu-width: 100px;
+    --b-bottom-menu-height: 68px;
+    --b-doc-color: #{$gray-color-1};
+    --b-orange-color: var(--b-warning-color-dark);
+    --b-orange-color-darker: #997021;
+
+    --b-doc-background-color: #{$gray-color-1};
+
+    --b-icon-stroke-color: var(--b-doc-background-color);
+    --b-icon-fill-color: var(--b-doc-background-color);
+    --b--menu-background-color: #{$gray-color-2};
+    --b-secondary-color-lighter: #{$body-color};
+    --b-primary-color: #{$gray-color-1};
+
+
+    //--b-hr-border-color: #{$grey-color-semi};
+
+    .b-slider {
+        --b-slider-label-color: var(--b-primary-color);
+        --b-slider-label-font-size: 14px;
+    }
+
+    .b-message {
+        --b-message-success-color: var(--b-success-color);
+        --b-message-warning-color: var(--b-orange-color);
+        --b-message-error-color: var(--b-error-color);
+        //--b-message-info-color: #{$light-gray-color};
+    }
+
+    .b-tabs {
+        //--b-tabs-font-family: #{$font-family-proxima};
+        //--b-tabs-color: #{$light-gray-color};
+        --b-tabs-font-size: 18px;
+        --b-tabs-active-color: inherit;
+        //--b-tabs-font-weight: 600;
+        --b-tabs-border-width: 2px;
+        --b-tabs-border-color: #{$grey-color-semi};
+        --b-tabs-hover-color: var(--b-primary-color);
+        --b-tabs-hover-border-color: transparent;
+    }
+
+    .bsteps {
+        --bsteps-step-padding: 0 0 0 115px;
+        --bsteps-hor-line-height: 2px;
+    }
+
+    .b-data-table-body-bg-color {
+        .b-data-table {
+            //--b-data-table-cell-background-color: none;
+            --b-data-table-cell-background-color: var(--b-doc-background-color);
+        }
+    }
+
+    .b-card {
+        .b-data-table-body-bg-color {
+            .b-data-table {
+                //--b-data-table-cell-background-color: none;
+                --b-data-table-cell-background-color: var(--b-card-background-color);
+            }
+        }
+    }
+
+    .b-window {
+        --b-window-padding-with-header: 40px;
+        --b-window-body-padding-with-header: 0 var(--b-window-padding-with-header) var(--b-window-padding-with-header) var(--b-window-padding-with-header);
+
+        .b-data-table-body-bg-color {
+            .b-data-table {
+                //--b-data-table-cell-background-color: none;
+                --b-data-table-cell-background-color: var(--b-window-background);
+            }
+        }
+
+        &.popover {
+            --b-window-popover-padding: 24px;
+            --b-window-popover-body-padding: var(--b-window-popover-padding);
+
+            &.with-header {
+                --b-window-popover-body-padding: calc(var(--b-window-popover-padding) / 2) var(--b-window-popover-padding) var(--b-window-popover-padding) var(--b-window-popover-padding);
+            }
+        }
+    }
+
+    .b-placeholder {
+        --b-placeholder-on-gradient-color1: var(--b-doc-background-color);
+        --b-placeholder-on-gradient-color2: #eee;
+        //--b-placeholder-on-gradient-color2: #{$grey-color-semi};
+    }
+
+    .b-card:not(.off) {
+        .b-placeholder {
+            --b-placeholder-on-gradient-color1: var(--b-card-background-color);
+        }
+    }
+
+    .flistbox {
+        --b-listbox-item-background-color: #eee;
+        --b-listbox-item-hover-background-color: #ccddff;
+        --b-listbox-item-selected-color: inherit;
+        --b-listbox-item-selected-background-color: #ccddff;
+    }
+
+    .b-lightweight-chart {
+        --b-lightweight-chart-chart-text-color: #8997b1;
+    }
+}
+
+@include media-max($bp-menu) {
+    :root {
+        //--b-header-height: 52px;
+        --b-header-height: 60px;
+        --b-data-layout-cols-padding: 8px;
+
+        .b-card {
+            --b-card-padding: 16px;
+        }
+    }
+}
+
+@include media-max($bp-small) {
+    :root {
+        //--b-header-height: 52px;
+        --b-header-height: 0;
+
+        .b-window {
+            --b-window-padding-with-header: 24px;
+
+            &.popover {
+                --b-window-popover-padding: 16px;
+            }
+        }
+    }
+}

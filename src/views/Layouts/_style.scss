@@ -1,0 +1,20 @@
+@import "../../assets/scss/vars";
+
+.view-layout {
+  padding-left: var(--b-left-menu-width);
+
+  .main {
+    padding-top: 0;
+  }
+}
+
+@include media-max($bp-menu) {
+  .view-layout {
+    padding-left: 0;
+
+    > .narrow-container {
+      //margin-top: 24px;
+      margin-bottom: var(--b-bottom-menu-height);
+    }
+  }
+}

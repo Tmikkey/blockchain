@@ -1,0 +1,19 @@
+.b-news-list {
+    padding-top:60px;
+    //max-width: 1650px;
+    margin: 0 auto 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-gap: 10px;
+    .b-news-block {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .b-news-block {
+        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    }
+}

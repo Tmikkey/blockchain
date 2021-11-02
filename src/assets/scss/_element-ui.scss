@@ -1,0 +1,59 @@
+.el-radio-button__inner {
+  color: #F1F0FF !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  white-space: break-spaces !important;
+  box-shadow: none !important;
+}
+
+.el-input__inner {
+  background-color: transparent !important;
+  border: 1px solid #2E303A !important;
+  border-radius: 10px !important;
+  width: 100% !important;
+  padding: 13px 16px !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  height: auto !important;
+  color: #F1F0FF !important;
+}
+
+.el-input__suffix {
+  right: 14px !important;
+
+  .el-input__icon {
+    line-height: 50px !important;
+    color: #F1F0FF !important;
+    font-size: 16px !important;
+  }
+}
+
+.el-select-dropdown {
+  border: 0 !important;
+
+  &__item {
+    overflow: visible !important;
+    height: 46px !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    &.selected {
+      color: #6158F5 !important;
+    }
+
+    &::before {
+      content: none !important;
+    }
+  }
+
+  &[x-placement^=bottom] .popper__arrow {
+    border-bottom-color: #222329 !important;
+
+    &::after {
+      border-bottom-color: #222329 !important;
+    }
+  }
+}

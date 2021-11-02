@@ -1,0 +1,43 @@
+.home {
+  &__recomendations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+
+    &__row {
+      margin-top: 32px;
+    }
+
+    &__item {
+      position: relative;
+      min-height: 296px;
+      display: flex;
+      align-items: end;
+      flex-direction: column;
+      padding: 24px 26px !important; 
+    }
+
+    &__image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    // &__title {
+    //   font-size: 19px;
+    //   line-height: 23px;
+    //   margin-bottom: 10px;
+    //   font-weight: 600;
+    //   position: relative;
+    //   margin-top: auto;
+    // }
+
+    // &__description {
+    //   font-size: 15px;
+    //   line-height: 19px;
+    //   opacity: .6;
+    // }
+  }
+}
